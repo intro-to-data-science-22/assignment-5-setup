@@ -1,0 +1,82 @@
+---
+title: "Assignment 5 - Reporting and communication"
+author: "FILL IN YOUR NAME"
+date: "`r format(Sys.time(), '%B %d, %Y | %H:%M:%S | %Z')`"
+output:
+  html_document:
+    code_folding: show
+    df_print: paged
+    highlight: tango
+    number_sections: no
+    theme: cosmo
+    toc: no
+---
+
+<style>
+div.answer {background-color:#f3f0ff; border-radius: 5px; padding: 20px;}
+</style>
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval = TRUE,
+                      error = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      comment = NA)
+```
+
+<!-- Do not forget to input your Github username in the YAML configuration up there --> 
+
+***
+
+```{r, include = T}
+#library(reports)
+library(sjPlot)
+library(haven)
+library(tidyverse)
+```
+
+<br>
+
+***
+
+### Task 1 - Pruning the news feed [8 points in total]
+
+In her article ["Pruning the news feed: Unfriending and unfollowing political content on social media" (Research & Politics 2016)](https://doi.org/10.1177/2053168016661873), Leticia Bode explores the extent to which users exercise control over their social media experiences, and who tends to engage in avoidance of political information by unfriending people who post about politics on social media. In the following, you are asked to reproduce some of her findings presented in the paper. To do so, check out the paper (accessible under the link above; ungated) and work with the dataset `data/bode-pew-data.sav` that you find in your assignment repository.
+
+a) Reproduce the results from **Table 1** and present them in a clean table that is at least as informative as the original one. Create a verbal report of the model and discuss deviations from the original results if there are any. [5 points]
+
+```{r}
+# YOUR CODE HERE
+```
+
+<div class = "answer">
+YOUR ANSWER HERE
+</div>
+
+<br>
+
+b) Offer a visual representation of the results provided in Table 1 using a well-designed coefficient plot. [3 points]
+
+```{r}
+# YOUR CODE HERE
+```
+
+<br>
+
+***
+
+### Task 2 - Data communication with flexdashboard [12 points in total]
+
+The file `data/airbnb.csv` contains data of [Airbnb listings in New York City for 2019](http://insideairbnb.com/). To work on the following tasks, please use `flexdashboard-template.Rmd`.
+
+a) Create an interactive table that reports the price of the 100 most and least expensive listings together with values on two other variables of interest from the dataset. Use the `DT` package to render an interactive table! [2 points]
+
+b) Provide a chart that presents the univariate distribution of one of the variables in the dataset, adhering to good practice of plot design. [2 points]
+
+c) Use the data to fit a linear model to predict the log transformation of the `price` variable. Your model should make use of at least three covariates, at least one of which should be a discrete (not continuous) variable. Then, create a plot that compares your model predictions versus the actual prices, and that adheres to the good practice of plot design. Use colors to highlight the belonging of the individual observations to one of the discrete predictors in your model. [3 points]
+
+d) Create an interactive `leaflet` map, mapping a random subsample of 100 of the host locations. [3 points]
+
+e) Compile your `flexdashboard` dashboard by populating it with the plots you created in task 2a-d, arranging the panels as  follows: Plot a) in column 1, plots b) and c) in column 2, and plot d) in column 3. Your dashboard overall should adhere to principles of good dashboard design. Knit and save the result as `flexdashboard.html` in your assignment repository. [2 points]
+

@@ -1,0 +1,16 @@
+---
+title: "Assignment 5 - Reporting and communication"
+author: "FILL IN YOUR NAME"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: cosmo
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(leaflet)
+
+```
+
